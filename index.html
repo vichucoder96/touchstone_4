@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="North Star Bakery is a neighborhood bakery serving handmade breads, pastries, and cakes. Pre-order for your family or event.">
+  <title>Home | North Star Bakery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html">
+      <img src="images/bakery-logo_c.png" alt="North Star Bakery logo: a loaf of bread with a wheat sprig inside" width="167" height="143">
+    </a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="welcome-heading">
+      <h1 id="welcome-heading">Welcome to North Star Bakery</h1>
+      <p>Pull up a stool, neighbor. Every loaf, pastry, and cake we make is shaped by hand each morning and baked with the community in mind. Whether you are grabbing breakfast on your commute, picking up something sweet for the family, or planning a party, we are glad you stopped by.</p>
+
+      <h2>A Warm Hello from Our Kitchen</h2>
+      <p>Press play to hear a short welcome message from the North Star team.</p>
+      <audio controls preload="metadata">
+        <source src="media/bakery-welcome_c.mp3" type="audio/mpeg">
+        <p>Your browser does not support the audio element. You can <a href="media/bakery-welcome_c.mp3">download the welcome message (MP3)</a> instead.</p>
+      </audio>
+    </section>
+
+    <section aria-labelledby="known-for-heading">
+      <h2 id="known-for-heading">What We&rsquo;re Known For</h2>
+      <p>Neighbors know us for crusty, slow-fermented breads, buttery pastries, and celebration cakes made to order. Our most loved loaf is the one we are proudest of.</p>
+
+      <figure>
+        <img src="images/bakery-signature-loaf_c.png" alt="A round, dark-crusted artisan loaf dusted with flour, resting in a white and tan checked kitchen towel" width="600" height="600">
+        <figcaption>Our Signature Loaf: a hand-shaped, slow-fermented country loaf with a deep golden crust and a soft, chewy crumb.</figcaption>
+      </figure>
+
+      <ul>
+        <li>Hand-shaped breads baked fresh every morning</li>
+        <li>Pastries and cookies made from scratch</li>
+        <li>Custom cakes for birthdays, weddings, and community events</li>
+        <li>Pre-orders for families, offices, and event planners</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Featured Item of the Week</h2>
+      <h3>Brown Butter Chocolate Chunk Cookies</h3>
+      <picture>
+        <source media="(min-width: 800px)" srcset="images/bakery-feature-large_c.png" width="1200" height="600">
+        <img src="images/bakery-feature-small_c.png" alt="A bakery display case filled with trays of chocolate chunk cookies, sugar-topped pastries, and glazed buns" width="600" height="600">
+      </picture>
+      <p>Crisp at the edges, soft in the middle, and loaded with dark chocolate. Order a half-dozen or a full dozen ahead of time through our <a href="contact.html">pre-order form</a>.</p>
+    </section>
+
+    <section aria-labelledby="visit-heading">
+      <h2 id="visit-heading">Hours &amp; Location</h2>
+      <p>Find us on Main Street, right in the heart of the neighborhood.</p>
+      <address>
+        North Star Bakery<br>
+        123 Main Street, Your Town, ST 00000
+      </address>
+      <p><strong>Open today:</strong> see our <a href="contact.html#hours-heading">full weekly hours</a>. Tuesday through Friday we open at 6:30 AM, just in time for the morning commute.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 North Star Bakery. Baked fresh, shared with the neighborhood.</p>
+    <address>
+      North Star Bakery<br>
+      123 Main Street, Your Town, ST 00000<br>
+      Phone: <a href="tel:+15555550123">(555) 555-0123</a><br>
+      Email: <a href="mailto:hello@northstarbakery.example">hello@northstarbakery.example</a>
+    </address>
+  </footer>
+
+</body>
+</html>
