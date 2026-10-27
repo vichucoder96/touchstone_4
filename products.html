@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse North Star Bakery's breads, pastries, and cakes, with approximate pricing and pre-order information.">
+  <title>Products | North Star Bakery</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/products.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <a href="index.html">
+      <img src="images/bakery-logo_c.png" alt="North Star Bakery logo: a loaf of bread with a wheat sprig inside" width="167" height="143">
+    </a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" aria-current="page">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="products-heading">
+      <h1 id="products-heading">Our Breads, Pastries &amp; Cakes</h1>
+      <p>Everything below is made by hand in small batches. Prices are approximate ranges and may vary with size and flavor. There is no online checkout. To reserve something, send us a <a href="contact.html">pre-order request</a> and we will confirm by email.</p>
+    </section>
+
+    <section aria-labelledby="saved-heading" class="saved-panel">
+      <h2 id="saved-heading">My Saved Items</h2>
+      <p id="saved-status" tabindex="-1" aria-live="polite">Turn on JavaScript to save items to your list.</p>
+      <ul id="saved-list" class="saved-list"></ul>
+      <p class="saved-actions">
+        <a href="contact.html" id="preorder-link" class="button-link" hidden>Start a pre-order with these items</a>
+        <button type="button" id="clear-saved" hidden>Clear saved items</button>
+      </p>
+    </section>
+
+    <section aria-labelledby="breads-heading">
+      <h2 id="breads-heading">Breads</h2>
+      <img src="images/bakery-bread_c.png" alt="Rows of crusty artisan loaves, including a seeded loaf and flour-dusted country breads, behind a glass bakery case" width="500" height="500">
+      <p>Our loaves are slow-fermented for deep flavor and a crackling crust. We bake a rotating selection every day, so ask what just came out of the oven.</p>
+      <ul>
+        <li data-id="signature-country-loaf"><strong>Signature Country Loaf:</strong> hand-shaped with a golden crust and chewy crumb.</li>
+        <li data-id="seeded-multigrain"><strong>Seeded Multigrain:</strong> topped with pumpkin, flax, and sunflower seeds.</li>
+        <li data-id="rustic-white-boule"><strong>Rustic White Boule:</strong> simple, soft, and perfect for sandwiches.</li>
+      </ul>
+      <p><strong>Price range:</strong> $6 &ndash; $10 per loaf</p>
+    </section>
+
+    <section aria-labelledby="pastries-heading">
+      <h2 id="pastries-heading">Pastries &amp; Cookies</h2>
+      <img src="images/bakery-feature-small_c.png" alt="Trays of freshly baked cookies, glazed buns, and sugar-dusted pastries in a wooden display case" width="500" height="500">
+      <p>From flaky morning pastries to cookies baked for the after-school crowd, our sweet case is stocked fresh every day.</p>
+      <ul>
+        <li data-id="chocolate-chunk-cookies"><strong>Brown Butter Chocolate Chunk Cookies:</strong> crisp edges and gooey centers.</li>
+        <li data-id="glazed-honey-buns"><strong>Glazed Honey Buns:</strong> soft, lightly sweet, and iced by hand.</li>
+        <li data-id="sandwich-cookies"><strong>Sugar-Dusted Sandwich Cookies:</strong> filled with cream and finished with pearl sugar.</li>
+      </ul>
+      <p><strong>Price range:</strong> $3 &ndash; $6 each, or $18 &ndash; $32 per dozen</p>
+    </section>
+
+    <section aria-labelledby="cakes-heading">
+      <h2 id="cakes-heading">Cakes</h2>
+      <p>Celebrating something special? We bake cakes for birthdays, weddings, and neighborhood gatherings. Cakes are made to order, so please request yours at least five days in advance.</p>
+      <ul>
+        <li data-id="classic-layer-cakes"><strong>Classic Layer Cakes:</strong> vanilla, chocolate, or lemon with buttercream.</li>
+        <li data-id="seasonal-fruit-cakes"><strong>Seasonal Fruit Cakes:</strong> made with fruit from local growers.</li>
+        <li data-id="cupcakes-by-the-dozen"><strong>Cupcakes by the Dozen:</strong> great for parties and office events.</li>
+      </ul>
+      <p><strong>Price range:</strong> $35 &ndash; $120 depending on size and decoration</p>
+    </section>
+
+    <section aria-labelledby="order-heading">
+      <h2 id="order-heading">Ready to Order?</h2>
+      <p>Planning an event or want to be sure your favorites are waiting for you? <a href="contact.html">Send a pre-order request</a> and tell us about any allergies.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 North Star Bakery. Baked fresh, shared with the neighborhood.</p>
+    <address>
+      North Star Bakery<br>
+      123 Main Street, Your Town, ST 00000<br>
+      Phone: <a href="tel:+15555550123">(555) 555-0123</a><br>
+      Email: <a href="mailto:hello@northstarbakery.example">hello@northstarbakery.example</a>
+    </address>
+  </footer>
+
+</body>
+</html>
