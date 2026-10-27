@@ -1,0 +1,552 @@
+
+:root {
+  --brown: #6b3e26;
+  --peach: #d88c5a;
+  --cream: #fff8f0;
+  --charcoal: #2f2a26;
+ 
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+ 
+  --space-s: 0.5rem;
+  --space-m: 1rem;
+  --space-l: 2rem;
+  --space-xl: 3rem;
+}
+ 
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--charcoal);
+  background: var(--cream);
+}
+ 
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+ 
+audio {
+  width: 100%;
+  max-width: 32rem;
+}
+ 
+a {
+  color: var(--brown);
+  text-underline-offset: 0.15em;
+}
+ 
+a:hover {
+  text-decoration-thickness: 0.2em;
+}
+ 
+:focus-visible {
+  outline: 3px solid var(--brown);
+  outline-offset: 3px;
+}
+ 
+header :focus-visible,
+footer :focus-visible {
+  outline-color: var(--cream);
+}
+ 
+/* ---------- Headings ---------- */
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  color: var(--brown);
+  line-height: 1.2;
+  margin: 0 0 var(--space-m);
+}
+ 
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; }
+ 
+h2 {
+  padding-bottom: var(--space-s);
+  border-bottom: 3px solid var(--peach);
+}
+ 
+p,
+ul,
+address {
+  margin: 0 0 var(--space-m);
+}
+ 
+address {
+  font-style: normal;
+}
+ 
+/* ---------- Header and navigation ---------- */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-m);
+  padding: var(--space-m);
+  background: var(--brown);
+}
+ 
+header img {
+  width: 110px;
+}
+ 
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-s);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ 
+nav a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: var(--cream);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+ 
+nav a:hover {
+  border-bottom-color: var(--peach);
+}
+ 
+nav a[aria-current="page"] {
+  color: var(--charcoal);
+  background: var(--peach);
+  border-bottom-color: var(--peach);
+}
+ 
+/* ---------- Main content ---------- */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: var(--space-m);
+}
+ 
+main > section {
+  padding: var(--space-l) 0;
+  border-bottom: 1px solid rgba(107, 62, 38, 0.2);
+}
+ 
+main > section:last-child {
+  border-bottom: 0;
+}
+ 
+main > section > img,
+main > section > figure,
+main > section > picture,
+main > section > video {
+  margin-bottom: var(--space-m);
+}
+ 
+main > section > img,
+picture img,
+figure img,
+video {
+  border-radius: 6px;
+}
+ 
+figure {
+  margin: 0 0 var(--space-m);
+}
+ 
+figcaption {
+  margin-top: var(--space-s);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+ 
+/* Bulleted lists: product and feature lists */
+main ul {
+  padding-left: 1.25rem;
+}
+ 
+main li {
+  margin-bottom: var(--space-s);
+}
+ 
+main li::marker {
+  color: var(--peach);
+}
+ 
+/* Team cards (about page) */
+article {
+  padding: var(--space-m);
+  margin-bottom: var(--space-m);
+  background: #fff;
+  border: 2px solid var(--brown);
+  border-radius: 6px;
+}
+ 
+article h3 {
+  margin-bottom: var(--space-s);
+}
+ 
+article p {
+  margin-bottom: 0;
+}
+ 
+/* ---------- Hours table ---------- */
+table {
+  width: 100%;
+  max-width: 32rem;
+  margin-bottom: var(--space-m);
+  border-collapse: collapse;
+  background: #fff;
+}
+ 
+caption {
+  padding: var(--space-s) 0;
+  font-weight: 700;
+  text-align: left;
+  color: var(--brown);
+}
+ 
+th,
+td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border: 1px solid rgba(107, 62, 38, 0.35);
+}
+ 
+thead th {
+  color: var(--cream);
+  background: var(--brown);
+}
+ 
+tbody th {
+  font-weight: 600;
+}
+ 
+/* ---------- Form ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  max-width: 36rem;
+}
+ 
+fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: var(--space-m);
+  background: #fff;
+  border: 2px solid var(--brown);
+  border-radius: 6px;
+}
+ 
+legend {
+  padding: 0 var(--space-s);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--brown);
+}
+ 
+label {
+  font-weight: 600;
+}
+ 
+input,
+select,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.7rem;
+  font: inherit;
+  color: var(--charcoal);
+  background: var(--cream);
+  border: 2px solid var(--brown);
+  border-radius: 4px;
+}
+ 
+textarea {
+  resize: vertical;
+}
+ 
+form > p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+  margin: 0;
+}
+ 
+button {
+  min-height: 44px;
+  padding: 0.7rem 1.5rem;
+  font: inherit;
+  font-weight: 700;
+  color: var(--brown);
+  background: transparent;
+  border: 2px solid var(--brown);
+  border-radius: 4px;
+  cursor: pointer;
+}
+ 
+button[type="submit"] {
+  color: var(--charcoal);
+  background: var(--peach);
+  border-color: var(--peach);
+}
+ 
+button:hover {
+  background: var(--brown);
+  border-color: var(--brown);
+  color: var(--cream);
+}
+ 
+/* ---------- Footer ---------- */
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  padding: var(--space-l) var(--space-m);
+  color: var(--cream);
+  background: var(--brown);
+  font-size: 0.95rem;
+}
+ 
+footer p,
+footer address {
+  margin: 0;
+}
+ 
+footer a {
+  color: var(--cream);
+}
+ 
+/* ---------- Tablet and larger (min-width: 48em, about 768px) ---------- */
+@media (min-width: 48em) {
+  h1 { font-size: 2.75rem; }
+  h2 { font-size: 1.75rem; }
+ 
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--space-m) var(--space-l);
+  }
+ 
+  header img {
+    width: 140px;
+  }
+ 
+  nav ul {
+    justify-content: flex-end;
+  }
+ 
+  main {
+    padding: var(--space-m) var(--space-l);
+  }
+ 
+  /* Product and feature lists become a row of cards */
+  main section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-m);
+    padding: 0;
+    list-style: none;
+  }
+ 
+  main section li {
+    flex: 1 1 14rem;
+    margin: 0;
+    padding: var(--space-m);
+    background: #fff;
+    border-left: 4px solid var(--peach);
+    border-radius: 4px;
+  }
+ 
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: var(--space-l);
+  }
+}
+ 
+/* Team section: heading on its own row, cards side by side */
+@media (min-width: 48em) {
+  main > section[aria-labelledby="staff-heading"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-m);
+  }
+ 
+  main > section[aria-labelledby="staff-heading"] h2 {
+    flex: 0 0 100%;
+  }
+ 
+  main > section[aria-labelledby="staff-heading"] article {
+    flex: 1 1 14rem;
+    margin: 0;
+  }
+}
+ 
+/* ---------- Desktop (min-width: 64em, about 1024px) ---------- */
+@media (min-width: 64em) {
+  main {
+    padding: var(--space-l) var(--space-xl);
+  }
+ 
+  main > section {
+    padding: var(--space-xl) 0;
+  }
+}
+ 
+/* ---------- Respect reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+ 
+/* ==========================================================
+   Touchstone 4: interactive features (saved items + form feedback)
+   Uses only the four palette colors. Mobile-first.
+   ========================================================== */
+ 
+[hidden] {
+  display: none !important;
+}
+ 
+/* ---------- Saved items panel (products page) ---------- */
+.saved-panel {
+  padding: var(--space-m);
+  margin-top: var(--space-m);
+  background: #fff;
+  border: 2px solid var(--brown);
+  border-radius: 6px;
+}
+ 
+#saved-status {
+  font-weight: 600;
+}
+ 
+.saved-list {
+  padding: 0;
+  list-style: none;
+}
+ 
+.saved-list:empty {
+  display: none;
+}
+ 
+.saved-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-s);
+  padding: var(--space-s) var(--space-m);
+  margin-bottom: var(--space-s);
+  background: var(--cream);
+  border-left: 4px solid var(--peach);
+  border-radius: 4px;
+}
+ 
+.saved-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-m);
+  margin-bottom: 0;
+}
+ 
+.save-btn {
+  display: block;
+  margin-top: var(--space-s);
+}
+ 
+button[aria-pressed="true"] {
+  color: var(--charcoal);
+  background: var(--peach);
+  border-color: var(--peach);
+}
+ 
+button[aria-pressed="true"]:hover {
+  color: var(--cream);
+  background: var(--brown);
+  border-color: var(--brown);
+}
+ 
+.button-link {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  text-decoration: none;
+  background: var(--peach);
+  border: 2px solid var(--peach);
+  border-radius: 4px;
+}
+ 
+.button-link:hover {
+  color: var(--cream);
+  background: var(--brown);
+  border-color: var(--brown);
+}
+ 
+/* ---------- Form feedback (contact page) ---------- */
+.error-message:not(:empty) {
+  display: block;
+  margin-top: 0.4rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--cream);
+  background: var(--brown);
+  border-radius: 4px;
+}
+ 
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  box-shadow: 0 0 0 3px var(--peach);
+}
+ 
+.field-note {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+ 
+.form-status:not(:empty) {
+  margin: 0;
+  padding: var(--space-s) var(--space-m);
+  font-weight: 600;
+  color: var(--charcoal);
+  background: var(--peach);
+  border-radius: 4px;
+}
+ 
+@media (min-width: 48em) {
+  .saved-list li {
+    flex: 1 1 100%;
+  }
+}
